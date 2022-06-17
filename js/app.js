@@ -18,7 +18,6 @@ const appVue = new Vue({
                 .then((axiosResponse) => {
                     this.emailsList.push(axiosResponse.data.response);
                     console.log(this.emailsList);
-                    this.printEmails();
                 });
         },
         generateEmailsList() {
@@ -31,14 +30,6 @@ const appVue = new Vue({
                 return true;
             }
             return false;
-        },
-        printEmails() {
-            if (this.checkEmailsNumber(this.emailsList)) {
-                const ulListaEmail = document.getElementById("listaEmail");
-                this.emailsList.forEach(email => {
-                    ulListaEmail.innerHTML += `<li>${email}</li>`;
-                }); 
-            }
         }
     },
     mounted : function() {

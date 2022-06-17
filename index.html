@@ -10,7 +10,9 @@
 </head>
 <body>
     <div id="app">
-        <ul id="listaEmail"></ul>
+        <ul v-if="checkEmailsNumber(emailsList)">
+            <li v-for="email in emailsList">{{ email }}</li>
+        </ul>
     </div>
     <script src="js/app.js"></script>
 </body>
