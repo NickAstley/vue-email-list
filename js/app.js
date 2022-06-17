@@ -27,7 +27,7 @@ const appVue = new Vue({
             }
         },
         checkEmailsNumber(listaEmailDaControllare) {
-            if (listaEmailDaControllare.length = 10) {
+            if (listaEmailDaControllare.length === 10) {
                 return true;
             }
             return false;
